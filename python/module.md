@@ -105,11 +105,17 @@ random.sample(a, 6)
 - now.strftime('%Y/%m/%d'): '2023/07/31'
 - now.year : 2023
 - now.day : 31
+- now.weekday(): 0~6 -> 월~일
 - birth = datetime(2023, 1, 1): 특정 날짜값을 선언
 
 ### from datetime import timedelta 
 : timedelta 모듈 불러옴
 
-ㄹ  
+- future = timedelta(days=3) : 시간을 더할 때 사용
+    - print(birth + future): datetime.datetime(2023, 1, 4, 0, 0)
 
-
+```
+christmas = datetime(2023, 12, 25)
+christmas - now
+``` 
+datetime.timedelta(days=146, seconds=27533, microsecons=876507)
